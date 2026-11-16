@@ -54,7 +54,7 @@
   function openForm(i) {
     editing = i; const a = i >= 0 ? apps[i] : { statut: 'ouvert', edition: 'Version d’essai', plateforme: 'Windows 10 ou 11 (64 bits)', parties: [], installation: ['Téléchargez le fichier .zip.', 'Clic droit sur le fichier, puis « Extraire tout… ».', 'Ouvrez le dossier extrait et lancez le programme .exe.', 'Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis « Exécuter quand même ».'] };
     $('form-title').textContent = i >= 0 ? `Modifier « ${a.nom} »` : 'Ajouter un logiciel';
-    for (const k of ['nom', 'version', 'edition', 'statut', 'accroche', 'description', 'plateforme', 'taille', 'fichier']) $('f-' + k).value = a[k] ?? '';
+    for (const k of ['nom', 'version', 'edition', 'statut', 'accroche', 'description', 'plateforme', 'taille', 'fichier', 'essai']) $('f-' + k).value = a[k] ?? '';
     $('f-installation').value = (a.installation ?? []).join('\n');
     const known = new Set(a.parties ?? []);
     $('f-parties').querySelectorAll('input').forEach((c) => { c.checked = known.has(c.value); known.delete(c.value); });
@@ -69,7 +69,7 @@
     const v = (k) => $('f-' + k).value.trim();
     if (!v('nom')) return msg('form-msg', 'Il faut un nom.', false);
     const old = editing >= 0 ? apps[editing] : null;
-    const a = { ...(old ?? {}), id: old?.id ?? slug(v('nom')), nom: v('nom'), version: v('version'), edition: v('edition'), statut: v('statut'), accroche: v('accroche'), description: v('description'), plateforme: v('plateforme'), taille: v('taille'), fichier: v('fichier'),
+    const a = { ...(old ?? {}), id: old?.id ?? slug(v('nom')), nom: v('nom'), version: v('version'), edition: v('edition'), statut: v('statut'), accroche: v('accroche'), description: v('description'), plateforme: v('plateforme'), taille: v('taille'), fichier: v('fichier'), essai: v('essai'),
       parties: [...[...$('f-parties').querySelectorAll('input:checked')].map((c) => c.value), ...v('parties-autres').split(',').map((s) => s.trim()).filter(Boolean)],
       installation: v('installation').split('\n').map((s) => s.trim()).filter(Boolean), date: new Date().toISOString().slice(0, 10) };
     const btn = $('save'); btn.disabled = true;

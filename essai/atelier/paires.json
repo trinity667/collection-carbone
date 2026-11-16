@@ -1,0 +1,898 @@
+{
+ "date": "2026-11-05T20:36:09.346Z",
+ "poids": {
+  "usage": 0.35,
+  "graphes": 0.15,
+  "enchainement": 0.2,
+  "reglages": 0.1,
+  "logiciel": 0.1,
+  "menu": 0.1
+ },
+ "sources": {
+  "evenements": 0,
+  "espaces": 2
+ },
+ "metiers": {
+  "photo": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "recadrer:0",
+      "reglages:0"
+     ],
+     "noms": [
+      "Recadrer",
+      "Luminosité, exposition…"
+     ],
+     "score": 0.846,
+     "parts": {
+      "usage": null,
+      "graphes": 1,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "recadrer:1",
+      "detourer:1"
+     ],
+     "noms": [
+      "Formats réseaux",
+      "Détourage du Studio"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "selection:0",
+      "selection:2"
+     ],
+     "noms": [
+      "Sélectionner le sujet",
+      "Sélectionner le ciel"
+     ],
+     "score": 0.769,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "selection:1",
+      "detourer:0"
+     ],
+     "noms": [
+      "Sélectionner le fond",
+      "Détourer (PhotoCraft)"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "selection:3",
+      "selection:4"
+     ],
+     "noms": [
+      "Partie nette",
+      "Lasso"
+     ],
+     "score": 0.646,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0.2,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "retouche:0"
+     ],
+     "noms": [
+      "Retouche publicitaire"
+     ],
+     "score": 0,
+     "parts": {}
+    },
+    {
+     "outils": [
+      "retouche:1",
+      "filtres:0"
+     ],
+     "noms": [
+      "Pinceau",
+      "Filtre"
+     ],
+     "score": 0.462,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": 0
+     }
+    },
+    {
+     "outils": [
+      "reglages:1",
+      "reglages:2"
+     ],
+     "noms": [
+      "Développer la photo",
+      "Étalonnage (look)"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "lumiere:0",
+      "lumiere:1"
+     ],
+     "noms": [
+      "Effets lumineux",
+      "Arrière-plan"
+     ],
+     "score": 0.566,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0.11,
+      "logiciel": 1,
+      "menu": null
+     }
+    }
+   ]
+  },
+  "graphisme": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "texte:0",
+      "miseenpage:2"
+     ],
+     "noms": [
+      "Placer un texte",
+      "Formats réseaux"
+     ],
+     "score": 0.636,
+     "parts": {
+      "usage": null,
+      "graphes": 1,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "texte:1",
+      "affiche:0"
+     ],
+     "noms": [
+      "Style d’écriture",
+      "Affiche rapide"
+     ],
+     "score": 0.567,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0.12,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "texte:2",
+      "calques:2"
+     ],
+     "noms": [
+      "Remplacer un texte du PSD",
+      "Exporter en image"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "affiche:1",
+      "miseenpage:0"
+     ],
+     "noms": [
+      "Recette d’affiche",
+      "Collage photos"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "affiche:2",
+      "affiche:3"
+     ],
+     "noms": [
+      "Style d’affiche",
+      "Textes d’affiche"
+     ],
+     "score": 0.182,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "calques:0",
+      "miseenpage:1"
+     ],
+     "noms": [
+      "Photo dans l’affiche",
+      "Mosaïque Instagram"
+     ],
+     "score": 0.364,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "calques:1",
+      "pinceau:0"
+     ],
+     "noms": [
+      "Ajouter un calque",
+      "Pinceau"
+     ],
+     "score": 0.576,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0.17,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "vectoriel:0",
+      "vectoriel:1"
+     ],
+     "noms": [
+      "Vectoriser",
+      "Répétition (grille, cercle, miroir)"
+     ],
+     "score": 0.571,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0.14,
+      "logiciel": 1,
+      "menu": null
+     }
+    }
+   ]
+  },
+  "motion": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "animer:0",
+      "effets:11"
+     ],
+     "noms": [
+      "Animer l’affiche",
+      "Recette pro"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "animer:1",
+      "rendu:1"
+     ],
+     "noms": [
+      "Chorégraphie",
+      "Rendu EffectCraft"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "animer:2"
+     ],
+     "noms": [
+      "Diaporama"
+     ],
+     "score": 0,
+     "parts": {}
+    },
+    {
+     "outils": [
+      "animer:3",
+      "rendu:0"
+     ],
+     "noms": [
+      "Enregistrer un mouvement",
+      "Composition → MP4"
+     ],
+     "score": 0.818,
+     "parts": {
+      "usage": null,
+      "graphes": 1,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:0",
+      "effets:1"
+     ],
+     "noms": [
+      "Couleur et étalonnage",
+      "Lumières et éclats"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:2",
+      "effets:3"
+     ],
+     "noms": [
+      "Particules",
+      "Déformations"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:4",
+      "effets:5"
+     ],
+     "noms": [
+      "Flous et profondeur",
+      "Textures et grain"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:6",
+      "effets:7"
+     ],
+     "noms": [
+      "Stylisation",
+      "Perspective et 3D"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:8",
+      "effets:9"
+     ],
+     "noms": [
+      "Temps et échos",
+      "Incrustation et masques"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "effets:10",
+      "transitions:0"
+     ],
+     "noms": [
+      "Tous les effets",
+      "Transitions EffectCraft"
+     ],
+     "score": 0.727,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "titres:0",
+      "transitions:1"
+     ],
+     "noms": [
+      "Titres animés",
+      "Transitions HyperFrames"
+     ],
+     "score": 0.462,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "titres:1",
+      "habillage:3"
+     ],
+     "noms": [
+      "Bandeaux nom",
+      "Réseaux sociaux"
+     ],
+     "score": 0.4,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0.6,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "carrousels:0",
+      "habillage:2"
+     ],
+     "noms": [
+      "Carrousels",
+      "Animations"
+     ],
+     "score": 0.335,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0.18,
+      "logiciel": 1,
+      "menu": 1
+     }
+    },
+    {
+     "outils": [
+      "habillage:0",
+      "habillage:1"
+     ],
+     "noms": [
+      "Habillages",
+      "Fonds"
+     ],
+     "score": 0.462,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 1,
+      "logiciel": 1,
+      "menu": 1
+     }
+    }
+   ]
+  },
+  "montage": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "couper:0",
+      "monter:0"
+     ],
+     "noms": [
+      "Couper un passage",
+      "Montage vidéo + son"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "soustitres:0",
+      "soustitres:1"
+     ],
+     "noms": [
+      "Transcrire la voix",
+      "Incruster les sous-titres"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "voix:0",
+      "voix:1"
+     ],
+     "noms": [
+      "Voix off IA",
+      "Réparer la voix"
+     ],
+     "score": 0.364,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "habiller:0",
+      "exporter:0"
+     ],
+     "noms": [
+      "Bandeaux nom",
+      "Composition → MP4"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "habiller:1"
+     ],
+     "noms": [
+      "Transitions"
+     ],
+     "score": 0,
+     "parts": {}
+    }
+   ]
+  },
+  "son": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "preparer:0",
+      "mixer:0"
+     ],
+     "noms": [
+      "Préparer le son (48 kHz, volume)",
+      "Mixage voix et musique"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "reparer:0",
+      "voixoff:1"
+     ],
+     "noms": [
+      "Réparer la voix",
+      "Transcrire"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "voixoff:0"
+     ],
+     "noms": [
+      "Voix off IA"
+     ],
+     "score": 0,
+     "parts": {}
+    }
+   ]
+  },
+  "3d": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "scene:0",
+      "rendu3d:0"
+     ],
+     "noms": [
+      "Mettre en scène en 3D",
+      "Aperçu en grand"
+     ],
+     "score": 0.364,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "detourer3d:0",
+      "detourer3d:1"
+     ],
+     "noms": [
+      "Sélectionner le sujet",
+      "Détourer (PhotoCraft)"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "rendu3d:1"
+     ],
+     "noms": [
+      "Formats réseaux"
+     ],
+     "score": 0,
+     "parts": {}
+    }
+   ]
+  },
+  "donnees": {
+   "ordre": "métier",
+   "evenements": 0,
+   "rangees": [
+    {
+     "outils": [
+      "tableau:0",
+      "graphique:0"
+     ],
+     "noms": [
+      "Ligne de tableau",
+      "Graphique (image)"
+     ],
+     "score": 0.2,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0.1,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "graphique:1",
+      "pilote:1"
+     ],
+     "noms": [
+      "Graphiques animés",
+      "Marque"
+     ],
+     "score": 0,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "redaction:0",
+      "redaction:1"
+     ],
+     "noms": [
+      "Rédaction IA",
+      "Légende réseaux"
+     ],
+     "score": 0.182,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 0,
+      "reglages": 0,
+      "logiciel": 1,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "pilote:0",
+      "pilote:3"
+     ],
+     "noms": [
+      "Sujet du jour",
+      "Proposition du jour"
+     ],
+     "score": 0.545,
+     "parts": {
+      "usage": null,
+      "graphes": 0,
+      "enchainement": 1,
+      "reglages": 1,
+      "logiciel": 0,
+      "menu": null
+     }
+    },
+    {
+     "outils": [
+      "pilote:2"
+     ],
+     "noms": [
+      "Brief du jour"
+     ],
+     "score": 0,
+     "parts": {}
+    }
+   ]
+  }
+ }
+}

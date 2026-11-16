@@ -26,7 +26,7 @@
     const list = (Array.isArray(apps) ? apps : []).filter((a) => a.statut !== 'masque');
     if (!list.length) { box.innerHTML = '<div class="empty">Aucun logiciel à tester pour le moment. Revenez bientôt !</div>'; return; }
     box.innerHTML = list.map((a) => {
-      const open = a.statut !== 'ferme' && a.fichier;
+      const open = a.statut !== 'ferme' && (a.fichier || a.essai);
       const steps = (a.installation?.length ? a.installation : ['Téléchargez le fichier.', 'Extrayez-le (clic droit, « Extraire tout… »).', 'Lancez le programme .exe du dossier.']).map((s) => `<li>${esc(s)}</li>`).join('');
       const ask = wa(C.whatsapp[0].num, `Bonjour, je teste ${a.nom} ${a.version ?? ''} et voici mon retour : `);
       return `<article class="app">
@@ -45,10 +45,12 @@
             ${a.taille ? `<span class="chip">${esc(a.taille)}</span>` : ''}
             ${open ? '' : '<span class="chip off">Test fermé pour le moment</span>'}
           </div>
-          <h3>Pour l’installer</h3>
+          <h3>${a.essai && !a.fichier ? 'Pour l’essayer' : 'Pour l’installer'}</h3>
           <ol>${steps}</ol>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
-            ${open ? `<a class="btn gold" href="${esc(a.fichier)}" rel="noopener">⬇ Télécharger l’essai</a>` : '<button class="btn gold" disabled>Bientôt disponible</button>'}
+            ${open && a.essai ? `<a class="btn gold" href="${esc(a.essai)}" target="_blank" rel="noopener">▶ Essayer en ligne</a>` : ''}
+            ${open && a.fichier ? `<a class="btn ${a.essai ? 'ghost' : 'gold'}" href="${esc(a.fichier)}" rel="noopener">⬇ Télécharger l’essai</a>` : ''}
+            ${open ? '' : '<button class="btn gold" disabled>Bientôt disponible</button>'}
             <a class="btn ghost" href="${esc(ask)}" target="_blank" rel="noopener">Donner mon avis</a>
           </div>
         </div>

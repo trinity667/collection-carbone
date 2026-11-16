@@ -10,21 +10,20 @@
       "Photo",
       "Graphisme",
       "Motion design",
-      "Montage",
-      "Son",
       "Studio 3D"
     ],
-    "plateforme": "Windows 10 ou 11 (64 bits)",
+    "plateforme": "Dans le navigateur (Chrome, Edge ou Firefox, sur ordinateur)",
     "taille": "",
     "fichier": "",
     "image": "",
-    "statut": "ferme",
+    "statut": "ouvert",
     "date": "2026-11-15",
     "installation": [
-      "Téléchargez le fichier .zip.",
-      "Clic droit sur le fichier, puis « Extraire tout… ».",
-      "Ouvrez le dossier extrait et lancez « Carbone Espaces.exe ».",
-      "Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis « Exécuter quand même »."
-    ]
+      "Cliquez sur « Essayer en ligne » : rien à installer.",
+      "La première ouverture prépare l’essai (quelques secondes), puis la page se recharge toute seule.",
+      "Vos images et vos créations restent dans votre navigateur ; « Enregistrer » télécharge votre affiche en PNG.",
+      "Les outils qui demandent les programmes Carbone sont réservés à la version complète."
+    ],
+    "essai": "essai/"
   }
 ]
