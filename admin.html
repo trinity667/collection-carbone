@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tableau de bord — Collection Carbone</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#181a21"/><circle cx="32" cy="32" r="27" fill="none" stroke="#f5b301" stroke-width="3"/><text x="32" y="43" text-anchor="middle" font-family="Segoe UI, Arial" font-weight="700" font-size="30" fill="#f5b301">C</text></svg>Tableau de bord</a>
+    <nav class="nav" style="display:flex"><a href="./" target="_blank">Voir le site ↗</a><a href="#" id="logout" class="hidden">Se déconnecter</a></nav>
+  </div>
+</header>
+
+<main class="dash">
+  <div class="wrap">
+    <!-- connexion -->
+    <div class="panel" id="login">
+      <h2>Connexion</h2>
+      <p class="muted">Le tableau de bord publie les logiciels à tester sur votre dépôt GitHub <code id="repo-name"></code>. Collez votre jeton d’accès GitHub : il reste dans ce navigateur, rien n’est envoyé ailleurs qu’à GitHub.</p>
+      <div class="row">
+        <label class="f wide">Jeton d’accès GitHub<input id="token" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+      </div>
+      <div class="checks" style="margin-top:12px"><label><input type="checkbox" id="remember"> Se souvenir sur cet ordinateur</label></div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn gold" id="connect">Se connecter</button><a class="btn ghost" href="#guide">Comment obtenir un jeton ?</a></div>
+      <div class="msg" id="login-msg"></div>
+    </div>
+
+    <!-- la liste -->
+    <div class="panel hidden" id="board">
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+        <h2 style="margin:0">Logiciels à tester</h2>
+        <button class="btn gold" id="new">＋ Ajouter un logiciel</button>
+      </div>
+      <p class="muted" style="margin-top:8px">Ouvert : téléchargeable. Fermé : visible, sans téléchargement. Masqué : absent du site.</p>
+      <div class="list" id="list"></div>
+      <div class="msg" id="board-msg"></div>
+    </div>
+
+    <!-- le formulaire -->
+    <div class="panel hidden" id="form">
+      <h2 id="form-title">Ajouter un logiciel</h2>
+      <div class="row">
+        <label class="f">Nom<input id="f-nom" placeholder="Carbone Espaces"></label>
+        <label class="f">Version<input id="f-version" placeholder="1.0.0"></label>
+        <label class="f">Édition<input id="f-edition" placeholder="Version d’essai"></label>
+        <label class="f">Statut<select id="f-statut"><option value="ouvert">Ouvert (téléchargeable)</option><option value="ferme">Fermé (bientôt)</option><option value="masque">Masqué</option></select></label>
+        <label class="f wide">Accroche (une phrase)<input id="f-accroche" placeholder="L’atelier de création tout-en-un…"></label>
+        <label class="f wide">Description<textarea id="f-description"></textarea></label>
+        <label class="f wide">Parties ouvertes au test
+          <div class="checks" id="f-parties"></div>
+          <input id="f-parties-autres" placeholder="Autres parties, séparées par des virgules">
+        </label>
+        <label class="f">Plateforme<input id="f-plateforme" placeholder="Windows 10 ou 11 (64 bits)"></label>
+        <label class="f">Taille du fichier<input id="f-taille" placeholder="rempli tout seul à l’envoi"></label>
+        <label class="f wide">Étapes d’installation (une par ligne)<textarea id="f-installation"></textarea></label>
+        <label class="f wide">Fichier à télécharger (.zip ou .exe)<input id="f-file" type="file" accept=".zip,.exe,.msi,.7z"></label>
+        <label class="f wide">… ou lien direct déjà en ligne<input id="f-fichier" placeholder="https://github.com/…/releases/download/…"></label>
+        <label class="f wide">Image (capture du logiciel, facultative)<input id="f-imgfile" type="file" accept="image/png,image/jpeg,image/webp"></label>
+      </div>
+      <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn gold" id="save">Publier</button><button class="btn ghost" id="cancel">Annuler</button></div>
+      <div class="msg" id="form-msg"></div>
+    </div>
+
+    <!-- le guide -->
+    <div class="panel guide" id="guide">
+      <h2>Guide : publier un logiciel à tester</h2>
+      <h3>1. Créer votre jeton GitHub (une seule fois)</h3>
+      <ol>
+        <li>Ouvrez <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com › Settings › Fine-grained tokens › Generate new token</a>.</li>
+        <li>Nom : « Tableau de bord Collection Carbone ». Expiration : 90 jours (à renouveler ensuite).</li>
+        <li>Repository access : « Only select repositories », puis choisissez <code id="repo-name2"></code>.</li>
+        <li>Permissions › Repository permissions › <b>Contents</b> : « Read and write ». Rien d’autre.</li>
+        <li>« Generate token », copiez-le et collez-le dans « Connexion » ci-dessus. Ne le partagez jamais.</li>
+      </ol>
+      <h3>2. Préparer une version d’essai (accès limité)</h3>
+      <ol>
+        <li>Le testeur ne doit voir que certaines parties : construisez une <b>édition d’essai</b>. Pour Carbone Espaces :<br><code>scripts\build-espaces.ps1 -Version 0.8.0 -Essai "photo,graphisme,motion,montage,son,3d"</code></li>
+        <li>Parties possibles : <code>photo</code>, <code>graphisme</code>, <code>motion</code>, <code>montage</code>, <code>son</code>, <code>3d</code>, <code>donnees</code>. Seules celles listées apparaissent ; Lots, le pilote du jour et les mises à jour sont retirés.</li>
+        <li>Le fichier prêt à publier est dans <code>dist\Carbone-Espaces-Essai-&lt;version&gt;-windows-x64.zip</code>.</li>
+        <li>Pour un autre logiciel : préparez de même une version qui n’ouvre que les parties à tester, en un seul .zip ou .exe.</li>
+      </ol>
+      <h3>3. Le publier ici</h3>
+      <ol>
+        <li>« ＋ Ajouter un logiciel », remplissez la fiche, choisissez le fichier, puis « Publier ».</li>
+        <li>Le fichier part dans une « Release » GitHub (jusqu’à 2 Go), la fiche dans la liste du site.</li>
+        <li>Le site se met à jour tout seul en une à deux minutes.</li>
+        <li>Si le navigateur ne peut pas envoyer un gros fichier, la page de la Release s’ouvre : glissez-y le fichier, puis « Update release ». Le lien du site est déjà le bon.</li>
+      </ol>
+      <h3>4. Ce que voit le testeur</h3>
+      <ol>
+        <li>Sur le site, il voit la fiche, les parties ouvertes, les étapes d’installation et le bouton « Télécharger l’essai ».</li>
+        <li>Dans le logiciel, seules les parties de l’essai sont présentes, avec le badge « Version d’essai · Collection Carbone ».</li>
+        <li>Il n’a jamais accès à ce tableau de bord : sans votre jeton, cette page ne peut rien modifier.</li>
+      </ol>
+    </div>
+  </div>
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

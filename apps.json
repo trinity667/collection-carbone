@@ -1,0 +1,23 @@
+[
+  {
+    "id": "carbone-espaces",
+    "nom": "Carbone Espaces",
+    "accroche": "L’atelier de création tout-en-un : photo, graphisme, motion design, montage, son et Studio 3D.",
+    "description": "Importez une affiche PSD et modifiez ses textes, animez chaque calque, montez une vidéo, puis faites vivre votre création dans un vrai Studio 3D : modélisation, sculpture, 146 bases à sculpter, 30 objets prêts (verre, eau qui coule, paysages) et animation 3D posée dans votre motion design.",
+    "version": "0.8.0",
+    "edition": "Version d’essai",
+    "parties": ["Photo", "Graphisme", "Motion design", "Montage", "Son", "Studio 3D"],
+    "plateforme": "Windows 10 ou 11 (64 bits)",
+    "taille": "52 Mo",
+    "fichier": "https://github.com/trinity667/collection-carbone/releases/download/carbone-espaces-v0.8.0/Carbone-Espaces-Essai-0.8.0-windows-x64.zip",
+    "image": "",
+    "statut": "ouvert",
+    "date": "2026-11-15",
+    "installation": [
+      "Téléchargez le fichier .zip.",
+      "Clic droit sur le fichier, puis « Extraire tout… ».",
+      "Ouvrez le dossier extrait et lancez « Carbone Espaces.exe ».",
+      "Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis « Exécuter quand même »."
+    ]
+  }
+]
